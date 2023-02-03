@@ -1,4 +1,4 @@
-README EN FRANÇAIS:
+README IN ENGLISH:
                                     
                                     
                                     Automatic Vacuum Cleaner
@@ -29,7 +29,7 @@ The program will prompt you to enter the required information:
     -The second line its initial position, as well as its orientation. Position and orientation are provided as 2 digits and a letter, separated by a space.
     -The third line is a series of instructions that the vacuum will execute. The instructions are a sequence of characters without spaces.
     
-README IN ENGLISH:
+README EN FRANÇAIS:
                                     
                                     
                                     Aspirateur Automatique
