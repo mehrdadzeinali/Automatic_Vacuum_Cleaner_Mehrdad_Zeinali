@@ -20,7 +20,7 @@ Usage
 
 To run the program, execute the following command in your terminal:
 
-    ./vaccum
+    ./vacuum_pos.py
 
 The program will prompt you to enter the required information:
 
@@ -50,7 +50,7 @@ Cloner le répertoire:
 
 Utilisation
     
-    ./vaccum
+    ./vacuum_pos.py
 
 Le programme vous demandera de saisir les informations requises:
 
