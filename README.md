@@ -1,4 +1,6 @@
 README EN FRANÇAIS:
+                                    
+                                    
                                     Automatic Vacuum Cleaner
 
 The purpose of this project is to develop an automatic vacuum cleaner that can move in a room modeled by a rectangular grid, following a sequence of commands.
@@ -28,6 +30,8 @@ The program will prompt you to enter the required information:
     -The third line is a series of instructions that the vacuum will execute. The instructions are a sequence of characters without spaces.
     
 README IN ENGLISH:
+                                    
+                                    
                                     Aspirateur Automatique
 
 Le but de ce projet est de développer un aspirateur automatique capable de se déplacer dans une pièce modélisée par une grille rectangulaire en suivant une séquence de commandes.
