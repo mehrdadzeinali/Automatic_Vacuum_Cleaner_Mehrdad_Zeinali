@@ -6,13 +6,18 @@
 ## -
 ##
 
-def move_forward(position, orientation):
+import math
+
+def move_forward(position, orientation, angle, distance):
     x, y = position
+    x = int(x)
+    y = int(y)
+    radians = math.radians(angle)
     cases = {
-        "N": (x, y + 1),
-        "S": (x, y - 1),
-        "E": (x + 1, y),
-        "W": (x - 1, y)
+        "N": (x, int(y + distance * math.sin(radians))),
+        "S": (x, int(y - distance * math.sin(radians))),
+        "E": (int(x + distance * math.sin(radians)), y),
+        "W": (int(x - distance * math.sin(radians)), y)
     }
     return cases.get(orientation, position)
 
@@ -29,7 +34,7 @@ def run_commands(commands, position, orientation, grid_size):
     x_max, y_max = grid_size
     for command in commands:
         if command == "A":
-            next_position = move_forward(position, orientation)
+            next_position = move_forward(position, orientation, 90, 1)
             x, y = next_position
             if x >= 0 and x <= x_max and y >= 0 and y <= y_max:
                 position = next_position
