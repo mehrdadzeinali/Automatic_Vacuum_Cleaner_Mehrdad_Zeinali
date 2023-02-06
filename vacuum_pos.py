@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 ##
-## Fruition Sciences, 2023
-## vacuum's positions
+## EPITECH PROJECT, 2023
+## example.py
 ## File description:
-## Test_technique_mehrdad_Zeinali
+## -
 ##
 
 def move_forward(position, orientation):
@@ -37,11 +37,23 @@ def run_commands(commands, position, orientation, grid_size):
             orientation = rotate(orientation, command)
     return position, orientation
 
-grid_size = tuple(map(int, input().split()))
-val = input().split()
-position = tuple(map(int, val[:2]))
-orientation = val[2]
-commands = input().strip()
+while True:
+    try:
+        grid_size = tuple(map(int, input().split()))
+        if len(grid_size) != 2:
+            raise ValueError("La première ligne doit contenir 2 chiffres.")
+        val = input().split()
+        position = tuple(map(int, val[:2]))
+        orientation = val[2]
+        if len(position) != 2 or len(orientation) != 1 or orientation not in ['N', 'E', 'S', 'W']:
+            raise ValueError("La deuxième ligne doit contenir 2 chiffres et une orientation en majuscule (N, E, S ou W).")
+        commands = input().strip()
+        if not all(c in ['A', 'D', 'G'] for c in commands):
+            raise ValueError("La troisième ligne doit contenir uniquement des 'A', 'D' et 'G'.")
+        final_position, final_orientation = run_commands(commands, position, orientation, grid_size)
+        print(" ".join(map(str, final_position)) + " " + final_orientation)
+        break
+    except Exception as e:
+        print(e)
+        continue
 
-final_position, final_orientation = run_commands(commands, position, orientation, grid_size)
-print(" ".join(map(str, final_position)) + " " + final_orientation)
